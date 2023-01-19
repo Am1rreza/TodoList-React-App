@@ -16,10 +16,22 @@ const TodoApp = () => {
     setTodos([...todos, newTodo]);
   };
 
+  const completeHandler = (id) => {
+    console.log(id);
+  };
+
+  const editHandler = (id) => {
+    console.log(id);
+  };
+
   return (
     <div className="container">
       <TodoForm addTodoHandler={addTodoHandler} />
-      <TodoList todos={todos} />
+      <TodoList
+        todos={todos}
+        onComplete={completeHandler}
+        onEdit={editHandler}
+      />
     </div>
   );
 };
