@@ -4,3 +4,14 @@
   align-items: center;
   margin: 10px 0;
 }
+
+.todoText {
+  transition: all 300ms;
+  cursor: pointer;
+  flex: 1;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #ccc;
+}

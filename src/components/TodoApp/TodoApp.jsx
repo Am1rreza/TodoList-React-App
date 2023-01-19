@@ -17,7 +17,15 @@ const TodoApp = () => {
   };
 
   const completeHandler = (id) => {
-    console.log(id);
+    const allTodos = [...todos];
+
+    const index = todos.findIndex((todo) => todo.id === id);
+    const selectedTodo = { ...todos[index] };
+
+    selectedTodo.isCompleted = !selectedTodo.isCompleted;
+    allTodos[index] = selectedTodo;
+    
+    setTodos(allTodos);
   };
 
   const editHandler = (id) => {
