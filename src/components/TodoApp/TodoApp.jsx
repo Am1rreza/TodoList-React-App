@@ -24,12 +24,17 @@ const TodoApp = () => {
 
     selectedTodo.isCompleted = !selectedTodo.isCompleted;
     allTodos[index] = selectedTodo;
-    
+
     setTodos(allTodos);
   };
 
   const editHandler = (id) => {
     console.log(id);
+  };
+
+  const deleteHandler = (id) => {
+    const filteredTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(filteredTodos);
   };
 
   return (
@@ -39,6 +44,7 @@ const TodoApp = () => {
         todos={todos}
         onComplete={completeHandler}
         onEdit={editHandler}
+        onDelete={deleteHandler}
       />
     </div>
   );

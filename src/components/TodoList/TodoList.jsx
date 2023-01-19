@@ -1,7 +1,7 @@
 import Todo from "../Todo/Todo";
 import styles from "./todoList.module.css";
 
-const TodoList = ({ todos, onComplete, onEdit }) => {
+const TodoList = ({ todos, onComplete, onEdit, onDelete }) => {
   if (todos.length === 0) return <h3>Add Some Todos</h3>;
 
   return (
@@ -13,6 +13,7 @@ const TodoList = ({ todos, onComplete, onEdit }) => {
             todo={todo}
             onComplete={() => onComplete(todo.id)}
             onEdit={() => onEdit(todo.id)}
+            onDelete={() => onDelete(todo.id)}
           />
         );
       })}
