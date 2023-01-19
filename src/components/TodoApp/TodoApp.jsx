@@ -19,7 +19,7 @@ const TodoApp = () => {
   return (
     <div className="container">
       <TodoForm addTodoHandler={addTodoHandler} />
-      <TodoList />
+      <TodoList todos={todos} />
     </div>
   );
 };
