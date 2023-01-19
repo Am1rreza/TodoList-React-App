@@ -1,6 +1,8 @@
+import styles from "./todo.module.css";
+
 const Todo = ({ todo }) => {
   return (
-    <div>
+    <div className={styles.todo}>
       <div>{todo.text}</div>
       <div>
         <button>Edit</button>
