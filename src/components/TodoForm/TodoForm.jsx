@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const TodoForm = () => {
+const TodoForm = (props) => {
   const [inputValue, setInputValue] = useState("");
 
   // Handlers
@@ -10,12 +10,21 @@ const TodoForm = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+
+    if (!inputValue) {
+      alert("Please enter a todo !");
+      return;
+    }
+
+    props.addTodoHandler(inputValue);
+    // clear the input
+    setInputValue("");
   };
 
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <input type="text" value={inputValue} onChange={changeHandler} />
-      <button type="submit" onSubmit={submitHandler}>
+      <button type="submit">
         Add
       </button>
     </form>
