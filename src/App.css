@@ -22,3 +22,19 @@
   border-radius: 5px;
   padding: 10px;
 }
+
+input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 3px;
+  outline: none;
+}
+
+input:focus {
+  border: 2px solid #B2456E;
+}
+
+input::placeholder {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 15px;
+}
