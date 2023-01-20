@@ -39,7 +39,7 @@ const TodoApp = () => {
 
   return (
     <div className="container">
-      <TodoForm addTodoHandler={addTodo} />
+      <TodoForm submitTodo={addTodo} />
       <TodoList
         todos={todos}
         onComplete={completeTodo}

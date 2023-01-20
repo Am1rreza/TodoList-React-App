@@ -16,7 +16,7 @@ const TodoForm = (props) => {
       return;
     }
 
-    props.addTodoHandler(inputValue);
+    props.submitTodo(inputValue);
     // clear the input
     setInputValue("");
   };
@@ -24,9 +24,7 @@ const TodoForm = (props) => {
   return (
     <form onSubmit={submitHandler}>
       <input type="text" value={inputValue} onChange={changeHandler} />
-      <button type="submit">
-        Add
-      </button>
+      <button type="submit">Add</button>
     </form>
   );
 };
