@@ -7,7 +7,7 @@ const TodoList = ({ todos, onComplete, onEdit, onDelete }) => {
   const [edit, setEdit] = useState({ id: null, text: "", isCompleted: false });
   // conditional rendering
   const renderTodos = () => {
-    if (todos.length === 0) return <h3>Add Some Todos</h3>;
+    if (todos.length === 0) return <h3>Add Some Todos !</h3>;
 
     return (
       <section className={styles.todoList}>

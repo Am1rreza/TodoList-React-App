@@ -1,43 +1,30 @@
-.todo {
+.formControl {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
-.todoText {
-  transition: all 300ms;
-  cursor: pointer;
-  flex: 1;
-}
-
-.completed {
-  text-decoration: line-through;
-  color: #ccc;
-}
-
-.remove {
-  color: #ec4444;
-  border: 1px solid #ec4444;
+.add {
+  color: #fff;
+  background-color: #00246b;
   border-radius: 5px;
-  padding: 4px 8px;
+  padding: 5px 16px;
   cursor: pointer;
-  background-color: #fff;
   font-size: 15px;
   transition: all 0.2s ease;
+  border: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.edit {
+.update {
   color: #00246b;
   border: 1px solid #00246b;
   border-radius: 5px;
-  padding: 4px 8px;
+  padding: 4px 6px;
   cursor: pointer;
   background-color: #fff;
   font-size: 15px;
-  transition: all 0.2s ease;
-  margin-right: 10px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-
