@@ -28,8 +28,16 @@ const TodoApp = () => {
     setTodos(allTodos);
   };
 
-  const editTodo = (id) => {
-    console.log(id);
+  const editTodo = (id, newInputValue) => {
+    const allTodos = [...todos];
+
+    const index = todos.findIndex((todo) => todo.id === id);
+    const selectedTodo = { ...todos[index] };
+
+    selectedTodo.text = newInputValue;
+    allTodos[index] = selectedTodo;
+
+    setTodos(allTodos);
   };
 
   const deleteTodo = (id) => {
