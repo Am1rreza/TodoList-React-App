@@ -6,7 +6,7 @@ const TodoApp = () => {
   const [todos, setTodos] = useState([]);
 
   // Handlers
-  const addTodoHandler = (inputValue) => {
+  const addTodo = (inputValue) => {
     const newTodo = {
       id: new Date().getTime(),
       text: inputValue,
@@ -16,7 +16,7 @@ const TodoApp = () => {
     setTodos([...todos, newTodo]);
   };
 
-  const completeHandler = (id) => {
+  const completeTodo = (id) => {
     const allTodos = [...todos];
 
     const index = todos.findIndex((todo) => todo.id === id);
@@ -28,23 +28,23 @@ const TodoApp = () => {
     setTodos(allTodos);
   };
 
-  const editHandler = (id) => {
+  const editTodo = (id) => {
     console.log(id);
   };
 
-  const deleteHandler = (id) => {
+  const deleteTodo = (id) => {
     const filteredTodos = todos.filter((todo) => todo.id !== id);
     setTodos(filteredTodos);
   };
 
   return (
     <div className="container">
-      <TodoForm addTodoHandler={addTodoHandler} />
+      <TodoForm addTodoHandler={addTodo} />
       <TodoList
         todos={todos}
-        onComplete={completeHandler}
-        onEdit={editHandler}
-        onDelete={deleteHandler}
+        onComplete={completeTodo}
+        onEdit={editTodo}
+        onDelete={deleteTodo}
       />
     </div>
   );
