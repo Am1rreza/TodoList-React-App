@@ -3,10 +3,12 @@ import TodoApp from "./components/TodoApp/TodoApp";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <h1>TodoList App</h1>
-      <TodoApp />
-    </div>
+      <div className="App">
+        <TodoApp />
+      </div>
+    </>
   );
 }
 

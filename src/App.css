@@ -3,8 +3,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
   padding: 0 10px 10px 10px;
+}
+
+h1 {
+  padding: 10px 0;
+  background-color: #cadcfc;
+  width: 100%;
+  text-align: center;
 }
 
 .container {
@@ -17,6 +23,7 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 input {
@@ -28,7 +35,7 @@ input {
 }
 
 input:focus {
-  border: 2px solid #00246B;
+  border: 2px solid #00246b;
 }
 
 input::placeholder {
