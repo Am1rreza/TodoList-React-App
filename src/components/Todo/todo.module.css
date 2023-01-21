@@ -9,6 +9,7 @@
   transition: all 300ms;
   cursor: pointer;
   flex: 1;
+  font-weight: bold;
 }
 
 .completed {
