@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 
 .nav span {

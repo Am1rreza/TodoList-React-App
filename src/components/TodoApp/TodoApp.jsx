@@ -48,8 +48,8 @@ const TodoApp = () => {
 
   return (
     <>
-      <Navbar todos={todos} />
       <div className="container">
+      <Navbar todos={todos} />
         <TodoForm submitTodo={addTodo} todos={todos} />
         <TodoList
           todos={todos}

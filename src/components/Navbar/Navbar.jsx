@@ -7,7 +7,7 @@ const Navbar = ({ todos }) => {
     <nav className={styles.nav}>
       {unCompletedTodos.length === 0 ? (
         <>
-          <h2>Set Your Today Todos</h2>
+          <h2>Set Your Today Todos !</h2>
         </>
       ) : (
         <>
