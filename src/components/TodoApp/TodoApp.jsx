@@ -50,7 +50,7 @@ const TodoApp = () => {
     <>
       <Navbar todos={todos} />
       <div className="container">
-        <TodoForm submitTodo={addTodo} />
+        <TodoForm submitTodo={addTodo} todos={todos} />
         <TodoList
           todos={todos}
           onComplete={completeTodo}

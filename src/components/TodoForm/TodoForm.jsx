@@ -31,7 +31,11 @@ const TodoForm = (props) => {
 
   return (
     <form style={{ width: "50%" }} onSubmit={submitHandler}>
-      <div className={styles.formControl}>
+      <div
+        className={`${styles.formControl} ${
+          props.todos.length !== 0 && styles.extraMargin
+        }`}
+      >
         <input
           type="text"
           value={inputValue}
