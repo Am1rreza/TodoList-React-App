@@ -2,7 +2,14 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 20px;
+  gap: 1rem;
 }
 
 .nav span {

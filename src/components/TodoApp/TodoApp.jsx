@@ -7,10 +7,10 @@ import TodoList from "../TodoList/TodoList";
 const TodoApp = () => {
   const [todos, setTodos] = useState([]);
   const [filteredTodos, setFilteredTodos] = useState([]);
-  const [status, setStatus] = useState("All");
+  const [selectedOption, setSelectedOption] = useState("All");
 
   useEffect(() => {
-    filterTodos(status);
+    filterTodos(selectedOption.value);
   }, [todos]);
 
   // Handlers
@@ -75,8 +75,8 @@ const TodoApp = () => {
         <Navbar
           todos={todos}
           filterTodos={filterTodos}
-          status={status}
-          setStatus={setStatus}
+          selectedOption={selectedOption}
+          setSelectedOption={setSelectedOption}
         />
         <TodoForm submitTodo={addTodo} todos={todos} />
         <TodoList
