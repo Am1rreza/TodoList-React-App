@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Filter from "../Filter/Filter";
 import Navbar from "../Navbar/Navbar";
 import TodoForm from "../TodoForm/TodoForm";
 import TodoList from "../TodoList/TodoList";
@@ -48,8 +49,9 @@ const TodoApp = () => {
 
   return (
     <>
+      <Filter />
       <div className="container">
-      <Navbar todos={todos} />
+        <Navbar todos={todos} />
         <TodoForm submitTodo={addTodo} todos={todos} />
         <TodoList
           todos={todos}
